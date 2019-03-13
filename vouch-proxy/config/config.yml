@@ -18,8 +18,8 @@ oauth:
   # Generic OpenID Connect
   # including okta
   provider: oidc
-  client_id:
-  client_secret:
+  client_id: {client_id}
+  client_secret: {client_secret}
   auth_url: https://dev-257588.oktapreview.com/oauth2/default/v1/authorize
   token_url: https://dev-257588.oktapreview.com/oauth2/default/v1/token
   user_info_url: https://dev-257588.oktapreview.com/oauth2/default/v1/userinfo
