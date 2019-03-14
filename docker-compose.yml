@@ -10,10 +10,6 @@ services:
     volumes:
       - "${PWD}/vouch-proxy/config:/config"
       - "${PWD}/vouch-proxy/data:/data"
-    deploy:
-      replicas: 1
-      restart_policy:
-        condition: on-failure
 
   nginx:
     image: nginx
@@ -25,10 +21,6 @@ services:
       - "${PWD}/web:/usr/share/nginx/html:ro"
       - "${PWD}/nginx/config/nginx.conf:/etc/nginx/nginx.conf:ro"
       - "${PWD}/nginx/certs:/etc/nginx/conf.d"
-    deploy:
-      replicas: 1
-      restart_policy:
-        condition: on-failure
 
 networks:
   static-content-network:
